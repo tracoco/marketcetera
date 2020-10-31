@@ -81,7 +81,7 @@
     <!-- local runtime -->
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>marketdata-exsim</artifactId>
+      <artifactId>marketdata-iex</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -332,6 +332,14 @@
                 </systemProperty>
                 <systemProperty>
                   <key>metc.instance.Xmx4096m</key>
+                  <value></value>
+                </systemProperty>              
+                <systemProperty>
+                  <key>metc.instance.Xdebug</key>
+                  <value></value>
+                </systemProperty>
+                <systemProperty>
+                  <key>metc.instance.Xrunjdwp:transport=dt_socket,address=127.0.0.1:8888,server=y,suspend=n</key>
                   <value></value>
                 </systemProperty>
                 <systemProperty>

@@ -170,6 +170,9 @@ public class MarketDataRpcService<SessionClazz>
                                                            serverRequestId,
                                                            clientRequestId).ifPresent(value->marketDataService.request(value,
                                                                                                                        listenerProxy));
+                    // todo lizhao:
+                    //MarketDataRpc.EventsResponse.Builder responseBuilder = MarketDataRpc.EventsResponse.newBuilder();
+                    //inResponseObserver.onNext(responseBuilder.build());
                 } else {
                     throw new IllegalArgumentException("Duplicate market data request id: " + clientRequestId);
                 }
@@ -230,8 +233,8 @@ public class MarketDataRpcService<SessionClazz>
                 SLF4JLoggerProxy.trace(MarketDataRpcService.this,
                                        "Received snapshot request {}",
                                        inRequest);
-                authzService.authorize(sessionHolder.getUser(),
-                                       MarketDataPermissions.RequestMarketDataSnapshotAction.name());
+                //authzService.authorize(sessionHolder.getUser(),
+                //                       MarketDataPermissions.RequestMarketDataSnapshotAction.name());
                 MarketDataRpc.SnapshotResponse.Builder responseBuilder = MarketDataRpc.SnapshotResponse.newBuilder();
                 Instrument instrument = TradeRpcUtil.getInstrument(inRequest.getInstrument()).orElse(null);
                 Content content = MarketDataRpcUtil.getContent(inRequest.getContent());

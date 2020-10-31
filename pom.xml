@@ -221,6 +221,11 @@
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
+        <artifactId>marketdata-iex</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
         <artifactId>marketdata-recorder</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -361,6 +366,11 @@
         <groupId>${project.groupId}</groupId>
         <artifactId>webui-cluster</artifactId>
         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>pl.zankowski</groupId>
+        <artifactId>iextrading4j-all</artifactId>
+        <version>3.3.4</version>
       </dependency>
       <!-- Compile: QuickFIX/J -->
       <dependency>
@@ -1241,7 +1251,7 @@
         <enabled>false</enabled>
       </snapshots>
     </pluginRepository>
-  </pluginRepositories>
+  </pluginRepositories> 
   <reporting>
     <plugins>
       <plugin>
