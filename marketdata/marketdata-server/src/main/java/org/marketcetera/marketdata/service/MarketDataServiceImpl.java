@@ -110,7 +110,8 @@ public class MarketDataServiceImpl
                           MarketDataListener inMarketDataListener)
     {
         String provider = inRequest.getProvider();
-        String requestId = UUID.randomUUID().toString();
+        // lizhao String requestId = UUID.randomUUID().toString();
+        String requestId = inRequest.getRequestId();
         MarketDataRequestEvent requestEvent = new SimpleMarketDataRequestEvent(inRequest,
                                                                                requestId,
                                                                                provider,

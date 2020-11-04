@@ -55,7 +55,8 @@ public class MarketDataEventModuleConnector
                                "Received {}",
                                inEvent);
         String provider = inEvent.getMarketDataRequestProvider().orElse(null);
-        String requestId = UUID.randomUUID().toString(); // TODO does this need to be fixed? inEvent.getMarketDataRequestId();
+        // lizhao String requestId = UUID.randomUUID().toString(); // TODO does this need to be fixed? inEvent.getMarketDataRequestId();
+        String requestId = inEvent.getMarketDataRequestId();
         if(provider == null) {
             SLF4JLoggerProxy.debug(this,
                                    "No provider requested, issuing request to all providers");
