@@ -56,6 +56,26 @@
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
+        <artifactId>client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>remote-receiver</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>remote-emitter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>saclient</artifactId>
+        <version>${project.version}</version>
+      </dependency>      
+      <dependency>
+        <groupId>${project.groupId}</groupId>
         <artifactId>dataflow-api</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -653,6 +673,11 @@
       </dependency>
       <!-- Runtime. -->
       <dependency>
+        <groupId>javax.jms</groupId>
+        <artifactId>javax.jms-api</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+      <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>eventbus-guava</artifactId>
         <version>${project.version}</version>
@@ -1200,6 +1225,8 @@
   </profiles>
   <modules>
     <module>admin</module>
+    <module>client</module>
+    <module>saclient</module>
     <module>cluster</module>
     <module>core</module>
     <module>dataflow</module>
