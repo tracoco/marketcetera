@@ -38,6 +38,10 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
+      <artifactId>marketdata-server</artifactId>
+    </dependency>    
+    <dependency>
+      <groupId>${project.groupId}</groupId>
       <artifactId>client</artifactId>
     </dependency>
     <dependency>

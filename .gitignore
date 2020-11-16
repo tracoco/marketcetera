@@ -4,6 +4,8 @@ target-eclipse
 .project
 .settings
 .attach*
+*.log
+*.swp
 
 fork/commons-i18n/.externalToolBuilders/
 fork/commons-i18n/maven-eclipse.xml

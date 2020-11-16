@@ -1719,7 +1719,7 @@ public abstract class AbstractRunningStrategy
                     orderHistoryManager.stop();
                 }
                 orderHistoryManager = new LiveOrderHistoryManager(origin);
-                orderHistoryManager.start();
+                // lizhao orderHistoryManager.start();
             } catch (ClientInitException e) {
                 throw new RuntimeException(e);
             }

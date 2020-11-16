@@ -61,6 +61,11 @@
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
+        <artifactId>strategy</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
         <artifactId>remote-receiver</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -1240,9 +1245,8 @@
     <module>rpc-core</module>
     <module>trade</module>
     <module>tools</module>
-    <module>ui</module>
     <module>util</module>
-    <module>util-test</module>
+    <module>util-test</module> 
   </modules>
   <repositories>
     <repository>

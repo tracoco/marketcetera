@@ -48,6 +48,11 @@
     </dependency>    
     <dependency>
       <groupId>${project.groupId}</groupId>
+      <artifactId>strategy</artifactId>
+      <scope>runtime</scope>
+    </dependency>     
+    <dependency>
+      <groupId>${project.groupId}</groupId>
       <artifactId>marketdata-rpc-server</artifactId>
       <scope>runtime</scope>
     </dependency>    
@@ -194,7 +199,7 @@
               </systemProperties>
               <mainClass>org.marketcetera.core.ApplicationContainer</mainClass>
               <arguments>
-                <argument>src/test/cmd_exec/inputs/sampleCommands.txt</argument>
+                <argument>src/test/cmd_exec/inputs/sampleCommands.txt</argument><!--  /samples/java/inputs/MarketData.txt</argument>-->
               </arguments>
               <classpathScope>test</classpathScope>
             </configuration>

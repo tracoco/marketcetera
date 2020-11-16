@@ -4,6 +4,7 @@
        xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+  <bean id="metrics" class="org.marketcetera.metrics.MetricService"/>
   <!-- Main Strategy Agent Object -->
   <bean id="sa" class="org.marketcetera.strategyagent.StrategyAgent" init-method="start" destroy-method="stop">
     <property name="moduleManager" ref="moduleManager"/>

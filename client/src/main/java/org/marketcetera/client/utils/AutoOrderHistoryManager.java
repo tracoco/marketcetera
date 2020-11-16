@@ -62,7 +62,7 @@ public class AutoOrderHistoryManager
     /* (non-Javadoc)
      * @see org.marketcetera.trade.utils.OrderHistoryManager#add(org.marketcetera.trade.ReportBase)
      */
-    @Override
+    // @Override
     public void add(ReportBase inReport)
     {
         throw new UnsupportedOperationException(org.marketcetera.client.Messages.DONT_ADD_REPORTS.getText());

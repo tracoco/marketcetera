@@ -339,7 +339,7 @@
                   <value></value>
                 </systemProperty>
                 <systemProperty>
-                  <key>metc.instance.Xrunjdwp:transport=dt_socket,address=127.0.0.1:8888,server=y,suspend=n</key>
+                  <key>metc.instance.Xrunjdwp:transport=dt_socket,address=127.0.0.1:8888,server=y,suspend=y</key>
                   <value></value>
                 </systemProperty>
                 <systemProperty>

@@ -1,7 +1,6 @@
 package org.marketcetera.marketdata.service;
 
 import java.util.Set;
-import java.util.UUID;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.marketcetera.event.Event;
