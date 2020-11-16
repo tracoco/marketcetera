@@ -4,8 +4,8 @@
 # version: $Id$
 #
 # Create the Process Data strategy
-createModule;metc:strategy:system;processData,ProcessData,JAVA,samples/java/scripts/ProcessData.java,,true,metc:sink:system
+createModule;metc:strategy:system;processData,ProcessData,JAVA,src/test/cmd_exec/samples/java/scripts/ProcessData.java,,true,metc:sink:system
 # Start the market data module
-startModule;metc:mdata:marketcetera:single
+startModule;metc:mdata:iex:single
 # Start the strategy
 startModule;metc:strategy:system:processData

@@ -43,6 +43,11 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
+      <artifactId>cep-esper</artifactId>
+      <scope>runtime</scope>
+    </dependency>    
+    <dependency>
+      <groupId>${project.groupId}</groupId>
       <artifactId>marketdata-iex</artifactId>
       <scope>runtime</scope>
     </dependency>    
@@ -199,7 +204,7 @@
               </systemProperties>
               <mainClass>org.marketcetera.core.ApplicationContainer</mainClass>
               <arguments>
-                <argument>src/test/cmd_exec/samples/java/inputs/MarketData.txt</argument>-->
+                <argument>src/test/cmd_exec/samples/java/inputs/ProcessData.txt</argument>-->
               </arguments>
               <classpathScope>test</classpathScope>
             </configuration>

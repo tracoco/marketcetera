@@ -13,8 +13,8 @@ import org.marketcetera.marketdata.Content;
  * @since 2.0.0
  */
 public class ProcessData extends Strategy {
-    private static final String [] SYMBOLS = {"AMZN", "JAVA"}; // Depends on MD - can be other symbols
-    private static final String MARKET_DATA_PROVIDER = "marketcetera"; // Can be activ, bogus, marketcetera
+    private static final String [] SYMBOLS = {"AMZN", "AAPL"}; // Depends on MD - can be other symbols
+    private static final String MARKET_DATA_PROVIDER = "iex"; // Can be activ, bogus, marketcetera, iex
     private static final String [] CEP_QUERY =
             {"select t.instrumentAsString as symbol, t.price * t.size as position from trade t"};
     private static final String CEP_PROVIDER = "esper";
