@@ -3,6 +3,7 @@ package sample;
 import org.marketcetera.strategy.java.Strategy;
 import org.marketcetera.event.AskEvent;
 import org.marketcetera.event.BidEvent;
+import org.marketcetera.event.MarketstatEvent;
 import org.marketcetera.event.TradeEvent;
 import org.marketcetera.marketdata.MarketDataRequestBuilder;
 import org.marketcetera.marketdata.AssetClass;
@@ -19,7 +20,7 @@ import org.marketcetera.marketdata.Content;
 public class MarketData extends Strategy {
     private static final String SYMBOLS = "AMZN,GOOG"; //Depends on MD - can be other symbols
     private static final String OPTION_OSI_SYMBOL = "AAPL  091121C00123450"; //AAPL, Nov'09 $123.45 Call
-    private static final String MARKET_DATA_PROVIDER = "bogus"; // Can be activ, bogus, marketcetera
+    private static final String MARKET_DATA_PROVIDER = "iex"; // Can be activ, bogus, marketcetera, iex
     /**
      * Executed when the strategy is started.
      * Use this method to set up data flows
@@ -33,11 +34,12 @@ public class MarketData extends Strategy {
                 withProvider(MARKET_DATA_PROVIDER).
                 withContent(Content.TOP_OF_BOOK).create());
         //option
-        requestMarketData(MarketDataRequestBuilder.newRequest().
-                withSymbols(OPTION_OSI_SYMBOL).
-                withAssetClass(AssetClass.OPTION).
-                withProvider(MARKET_DATA_PROVIDER).
-                withContent(Content.LATEST_TICK).create());
+		/*
+		 * requestMarketData(MarketDataRequestBuilder.newRequest().
+		 * withSymbols(OPTION_OSI_SYMBOL). withAssetClass(AssetClass.OPTION).
+		 * withProvider(MARKET_DATA_PROVIDER).
+		 * withContent(Content.LATEST_TICK).create());
+		 */
     }
 
     /**
@@ -69,5 +71,11 @@ public class MarketData extends Strategy {
     public void onTrade(TradeEvent inTrade) {
         warn("Trade " + inTrade);
     }
+    
+    @Override
+    public void onMarketstat(MarketstatEvent inStatistics)
+    {
+    	warn("State " + inStatistics);
+    }    
 
 }
